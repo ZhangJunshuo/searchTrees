@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>indexSearchTreePage</class>
+ <widget class="QWidget" name="indexSearchTreePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1844</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>索引搜索树实例</string>
+  </property>
+  <widget class="QLabel" name="ISzjspng">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>5</y>
+     <width>1600</width>
+     <height>1080</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid black; background-color:white</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Graph绘制区域&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISinsert">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>80</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>插入</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ISinputInsertPair">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>40</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISerase">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>160</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ISinputEraseKey">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>120</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ISinput_shunxucharu">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>200</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISshunxucharu">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>240</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>顺序插入</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ISinput_suijicharu">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>280</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISsuijicharu">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>320</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>随机插入</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ISinput_zidongsuijicharu">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>360</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISzidongsuijicharu">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>400</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>自动随机插入</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISfanhuizhuye">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>750</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回主页</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ISelementOfRank">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>480</y>
+     <width>231</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>找到排名为..的元素</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ISinput_elementOfRank">
+   <property name="geometry">
+    <rect>
+     <x>1610</x>
+     <y>440</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

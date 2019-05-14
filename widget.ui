@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>463</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>搜索树演示程序_By ZhangJunshuo</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>22</x>
+     <y>20</y>
+     <width>301</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>欢迎使用！
+这里是ZhangJunshuo的搜索树演示程序！
+
+请点击右侧按钮选择您想要测试的搜索树类型
+
+
+
+提示：
+为了显示更大的树结构
+程序将以最大化窗口展示
+
+如需演示搜索树的索引排序功能
+请选择下方的索引搜索树(ISTree)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>30</y>
+     <width>89</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>终止</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>80</y>
+     <width>89</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>searchTree</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AVL">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>130</y>
+     <width>89</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>AVLTree</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RB">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>180</y>
+     <width>89</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RBTree</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Treap">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>230</y>
+     <width>89</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Treap</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IS">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>91</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ISTree</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
