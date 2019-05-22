@@ -13,7 +13,7 @@ RBTreePage::RBTreePage(QWidget *parent) :
     ui->setupUi(this);
     setWindowState(Qt::WindowMaximized);
     //QImage* img=new QImage;
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
     //ui->RBzjspng->setPixmap(QPixmap::fromImage(*img));
 }
 
@@ -31,11 +31,12 @@ void RBTreePage::on_RBinsert_clicked()
 {
     RBzjs.insert(ui->RBinputInsertPair->toPlainText().toInt());
     RBzjs.RBoutput();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->RBzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
     //ui->RBzjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -57,7 +58,7 @@ void RBTreePage::on_RBinsert_clicked()
     //
     ui->RBzjspng->setPixmap(rePixmap);
 
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
     //开始缩放图片
 //    int width0 = img->width();
 //    int height0 = img->height();
@@ -81,11 +82,12 @@ void RBTreePage::on_RBerase_clicked()
 {
     RBzjs.erase(ui->RBinputEraseKey->toPlainText().toInt());
     RBzjs.RBoutput();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->RBzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
     //ui->RBzjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -130,11 +132,12 @@ void RBTreePage::on_RBshunxucharu_clicked()
         }
     //
         temp_zjs.RBoutput();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->RBzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
         //ui->RBzjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -179,11 +182,12 @@ void RBTreePage::on_RBsuijicharu_clicked()
         }
     //
         temp_zjs.RBoutput();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->RBzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
         //ui->RBzjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -243,11 +247,12 @@ void RBTreePage::on_RBzidongsuijicharu_clicked()
             RBiForZiDongSuiJiChaRu++;
             //
             RBtemp_zjsForZiDongSuiJiChaRu.RBoutput();
+            Sleep(100);
             int x = 1600;
             int y = 1000;
             ui->RBzjspng->setGeometry(5,5,x,y);
             //QImage* img=new QImage;
-            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\rbzjs.png");
             //ui->zjspng->setScaledContents(false);
             //
             int imgw1 = pixmap->width();

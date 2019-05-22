@@ -62,7 +62,7 @@ class searchTree
 						{
 							ptr->left = new searchTreeNode<I,V>;
 							ptr->left->element = _element;
-							ptr->left->left_up = pre_ptr;
+                            ptr->left->left_up = ptr;
 							num++;
 							break;
 						}
@@ -78,7 +78,7 @@ class searchTree
 						{
 							ptr->right = new searchTreeNode<I,V>;
 							ptr->right->element = _element;
-							ptr->right->right_up = pre_ptr;
+                            ptr->right->right_up = ptr;
 							num++;
 							break;
 						}
@@ -97,160 +97,165 @@ class searchTree
 			}
 		}
 //erase
-		void erase(I index)
-		//根据index删除pair
-		{
-			if(num==0)
-				throw "Erase an empty tree!\n";
-			searchTreeNode<I,V>* ptr = root;
-			//开一个searchTreeNode<I,V>*的vector，用于保存删除，以便维护leftSize
-			vector< searchTreeNode<I,V>* > deleteNodePath;
-			//开始删除
-			while(1)
-			{
-				if(index < ptr->element.first)
-				{
-					if(ptr->left==NULL)
-					{
-						//该node实际不存在
-						throw "Node doesnt exist!\n";
-						//删除失败，不用更新任何一个点的leftSize
-						//throw将使函数立即终止
-					}
-					else
-					{
-						//此时要保存路径，以便后面删除完毕后，维护leftSize
-						deleteNodePath.push_back(ptr);
-						//只凭这一句记录其实并不全面
-						//对于删除有两个子节点的节点的情况，因为还得从它的右子树根向左走到底，所以在那里还得记录
-						ptr = ptr->left;
-					}
-				}
-				else if(index > ptr->element.first)
-				{
-					if(ptr->right==NULL)
-					{
-						throw "Node doesnt exist!\n";
-						//删除失败，不用更新任何一个点的leftSize
-					}
-					else
-					{
-						//右走并不记录！！！
-						//因为右走的node的leftSZie根本不受影响！
-						ptr = ptr->right;
-					}
-				}
-				else
-				{
-					//找到了该node
-					//分三种情况删除
-					if(ptr->left==NULL && ptr->right==NULL)
-						//最简单的叶子节点
-					{
-						if(ptr==root)
-						{
-							root = NULL;
-							delete ptr;
-						}
-						else
-						{
-							if(ptr->left_up!=NULL)
-							{
-								//只有这样才能方便地知道ptr到底是一个左节点
-								//还是一个右节点
-								auto up_ptr = ptr->left_up;
-								up_ptr->left = NULL;
-								delete ptr;
-								num--;
-								break;
-							}
-							else
-							{
-								auto up_ptr = ptr->right_up;
-								up_ptr->right = NULL;
-								delete ptr;
-								num--;
-								break;
-							}
-						}
-					}
-					else if(ptr->left!=NULL && ptr->right==NULL)
-						//有一个子节点，且为左子节点
-					{
-						if(ptr->left_up!=NULL)
-						{
-							auto up_ptr = ptr->left_up;
-							up_ptr->left = ptr->left;
-							delete ptr;
-							num--;
-							break;
-						}
-						else
-						{
-							auto up_ptr = ptr->right_up;
-							up_ptr->right = ptr->left;
-							delete ptr;
-							num--;
-							break;
-						}
-					}
-					else if(ptr->left==NULL && ptr->right!=NULL)
-						//有一个子节点，且为右子节点
-					{
-						if(ptr->left_up!=NULL)
-						{
-							auto up_ptr = ptr->left_up;
-							up_ptr->left = ptr->right;
-							delete ptr;
-							num--;
-							break;
-						}
-						else
-						{
-							auto up_ptr = ptr->right_up;
-							up_ptr->right = ptr->right;
-							delete ptr;
-							num--;
-							break;
-						}
-					}
-					else
-						//有两个子节点
-						//之所以用else，是因为能到这一层已经确定要删的就是ptr了
-					{
-						auto replace_ptr = ptr->right;
-						while(1)
-						{
-							if(replace_ptr->left==NULL)
-							{
-								//先用replace_ptr的值替换掉ptr的
-								ptr->element = replace_ptr->element;
-								//再删掉replace_ptr
-								//replace_ptr一定是左子节点！
-								replace_ptr->left_up->left = NULL;
-								//这一步其实完全不用auto申请新指针
-								//之前一直没这么写是因为比较难懂，怕自己review看不明白
-								//就是先断指向re_ptr的线，然后delete该ptr
-								delete replace_ptr;
-								num--;
-								break;
-							}
-							//在此处还得记录路径！
-							deleteNodePath.push_back(replace_ptr);
-							replace_ptr = replace_ptr->left;
-						}
-					}
-					//这一层是三种情况的归一，删除完毕之后，维护路径上所有点的leftSize就是要在这一层进行了。
-					auto iter = deleteNodePath.begin();
-					while(iter!=deleteNodePath.end())
-					{
-						(*iter)->leftSize--;
-					}
-				}
-			}
-			//break之后到达的位置
-			//可见break就相当于函数结束return
-		}
+                void erase(I index)
+                //根据index删除pair
+                {
+                    if(num==0)
+                        printf( "Erase an empty tree!\n");
+                    searchTreeNode<I,V>* ptr = root;
+                    while(1)
+                    {
+                        if(index < ptr->element.first)
+                        {
+                            if(ptr->left==NULL)
+                                //该node实际不存在
+                                printf( "Node doesnt exist!\n");
+                            else
+                                ptr = ptr->left;
+                        }
+                        else if(index > ptr->element.first)
+                        {
+                            if(ptr->right==NULL)
+                                printf( "Node doesnt exist!\n");
+                            else
+                                ptr = ptr->right;
+                        }
+                        else
+                        {
+                            //找到了该node
+                            //分三种情况删除
+                            if(ptr->left==NULL && ptr->right==NULL)
+                                //最简单的叶子节点
+                            {
+                                //printf("2331\n");
+                                if(ptr==root)
+                                {
+                                    root = NULL;
+                                    num -- ;
+                                    //delete ptr;
+                                    break;
+                                }
+                                else
+                                {
+                                    if(ptr->left_up!=NULL)
+                                    {
+                                        //printf("32\n");
+                                        //只有这样才能方便地知道ptr到底是一个左节点
+                                        //还是一个右节点
+                                        //cout << ptr->element.first << endl;
+
+                                        auto up_ptr = ptr->left_up;
+                                        //cout << up_ptr->element.first << endl;
+                                        up_ptr->left = NULL;
+                                        //delete ptr;
+                                        num--;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        auto up_ptr = ptr->right_up;
+                                        up_ptr->right = NULL;
+                                        //delete ptr;
+                                        num--;
+                                        break;
+                                    }
+                                }
+                            }
+                            else if(ptr->left!=NULL && ptr->right==NULL)
+                                //有一个子节点，且为左子节点
+                            {
+                                //printf("2332\n");
+                                //printf("删的是5\n");
+                                if(ptr->left_up!=NULL)
+                                {
+                                    //printf("zheli\n");
+                                    auto up_ptr = ptr->left_up;
+                                    up_ptr->left = ptr->left;
+                                    //delete ptr;
+                                    num--;
+                                    break;
+                                }
+                                else if(ptr->right_up!=NULL)
+                                {
+                                    //printf("nali\n");
+                                    auto up_ptr = ptr->right_up;
+                                    up_ptr->right = ptr->left;
+                                    //delete ptr;
+                                    num--;
+                                    break;
+                                }
+                                else
+                                {
+                                    root = ptr->left;
+                                    num--;
+                                    break;
+                                }
+                            }
+                            else if(ptr->left==NULL && ptr->right!=NULL)
+                                //有一个子节点，且为右子节点
+                            {
+                                //printf("2333\n");
+                                if(ptr->left_up!=NULL)
+                                {
+                                    auto up_ptr = ptr->left_up;
+                                    up_ptr->left = ptr->right;
+                                    //delete ptr;
+                                    num--;
+                                    break;
+                                }
+                                else if(ptr->right_up!=NULL)
+                                {
+                                    auto up_ptr = ptr->right_up;
+                                    up_ptr->right = ptr->right;
+                                    //delete ptr;
+                                    num--;
+                                    break;
+                                }
+                                else
+                                {
+                                    root = ptr->right;
+                                    num--;
+                                    break;
+                                }
+                            }
+                            else
+                                //有两个子节点
+                                //之所以用else，是因为能到这一层已经确定要删的就是ptr了
+                            {
+                                //printf("2334\n");
+                                auto replace_ptr = ptr->right;
+                                if(replace_ptr->left==NULL)
+                                {
+                                    ptr->element = replace_ptr->element;
+                                    replace_ptr->right_up->right = NULL;
+                                    num--;
+                                    break;
+                                }
+                                while(1)
+                                {
+                                    if(replace_ptr->left==NULL)
+                                    {
+                                        //printf("删的是3\n");
+                                        //先用replace_ptr的值替换掉ptr的
+                                        ptr->element = replace_ptr->element;
+                                        //再删掉replace_ptr
+                                        //replace_ptr一定是左子节点！
+                                        replace_ptr->left_up->left = NULL;
+                                        //这一步其实完全不用auto申请新指针
+                                        //之前一直没这么写是因为比较难懂，怕自己review看不明白
+                                        //就是先断指向re_ptr的线，然后delete该ptr
+                                        //delete replace_ptr;
+                                        num--;
+                                        break;
+                                    }
+                                    replace_ptr = replace_ptr->left;
+                                }
+                            }
+                        }
+                    }
+                    //break之后到达的位置
+                    //可见break就相当于函数结束return
+                }
 //elementOf
 		pair<I,V> elementOf(I index)
 		//根据index返回pair
@@ -457,7 +462,7 @@ class searchTree
 			preOrder(ptr,fp);
 			fprintf(fp,"}\n");
 			fclose(fp);
-            WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/indexSearchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/zjs.png", SW_HIDE);
+            WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/indexSearchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/indexSearchTreezjs.png", SW_HIDE);
         }
         void outputForFind(pair<int,char> _element)
         {
@@ -467,7 +472,7 @@ class searchTree
             preOrderForFind(ptr,fp, _element);
             fprintf(fp,"}\n");
             fclose(fp);
-            WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/indexSearchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/zjs.png", SW_HIDE);
+            WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/indexSearchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/indexSearchTreezjs.png", SW_HIDE);
         }
 };
 #endif // SVARCHTREEWITHLEFTSIZE_H

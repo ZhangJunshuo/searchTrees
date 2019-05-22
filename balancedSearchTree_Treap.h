@@ -125,8 +125,8 @@ class searchTree
 			}
 			fprintf(fp,"}\n");
 			fclose(fp);
-            //system("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/treap_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/zjs.png");
-            WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/treap_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/zjs.png", SW_HIDE);
+            //system("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/treap_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/treapzjs.png");
+            WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/treap_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/treapzjs.png", SW_HIDE);
 		}
 
 };

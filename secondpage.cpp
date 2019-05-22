@@ -31,6 +31,7 @@ void secondPage::on_insert_clicked()
 {
     zjs.insert(pair<int,char>( ui->inputInsertPair->toPlainText().toInt(), 'z'));
     zjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->zjspng->setGeometry(5,5,x,y);
@@ -56,31 +57,13 @@ void secondPage::on_insert_clicked()
     auto rePixmap = pixmap->scaled(imgw1, imgh1, Qt::KeepAspectRatio);
     //
     ui->zjspng->setPixmap(rePixmap);
-
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
-    //开始缩放图片
-//    int width0 = img->width();
-//    int height0 = img->height();
-//    int width1,height1;
-//    int k = 0;  //记录图片与label的高宽比，马上用到
-//    if(width0/x>=height0/y)
-//        k = width0/x;
-//    else {
-//        k = height0/y;
-//    }
-//    width1 = width0 / k;
-//    height1 = height0 / k;
-//    QImage* scaledimg = new QImage;
-//    *scaledimg = img->scaled(width1,height1,Qt::KeepAspectRatio);
-
-//    ui->zjspng->setPixmap(QPixmap::fromImage(*scaledimg));
-//    //ui->zjspng->setText("zjsnb!");
 }
 
 void secondPage::on_erase_clicked()
 {
     zjs.erase(ui->inputEraseKey->toPlainText().toInt());
     zjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->zjspng->setGeometry(5,5,x,y);
@@ -131,6 +114,7 @@ void secondPage::on_shunxucharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->zjspng->setGeometry(5,5,x,y);
@@ -181,6 +165,7 @@ void secondPage::on_suijicharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->zjspng->setGeometry(5,5,x,y);
@@ -246,6 +231,7 @@ void secondPage::on_zidongsuijicharu_clicked()
             ISiForZiDongSuiJiChaRu++;
             //
             IStemp_zjsForZiDongSuiJiChaRu.output();
+            Sleep(100);
             int x = 1600;
             int y = 1000;
             ui->zjspng->setGeometry(5,5,x,y);

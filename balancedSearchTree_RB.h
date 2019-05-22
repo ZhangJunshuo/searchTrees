@@ -571,8 +571,8 @@ void searchTree<T>::RBoutput()
         RBoutput(mRoot, mRoot->key, 0, fp);
 	fprintf(fp,"}\n");
 	fclose(fp);
-    //system("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/RB_searchTree_output_tempFile.dot -T png -o zjs.png");
-    WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/RB_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/zjs.png", SW_HIDE);
+    //system("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/RB_searchTree_output_tempFile.dot -T png -o rbzjs.png");
+    WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/RB_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/rbzjs.png", SW_HIDE);
 }
 
 #endif

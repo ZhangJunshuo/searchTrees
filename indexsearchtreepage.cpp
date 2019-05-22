@@ -13,7 +13,7 @@ indexSearchTreePage::indexSearchTreePage(QWidget *parent) :
     ui->setupUi(this);
     setWindowState(Qt::WindowMaximized);
     //QImage* img=new QImage;
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
     //ui->zjspng->setPixmap(QPixmap::fromImage(*img));
 }
 
@@ -31,11 +31,12 @@ void indexSearchTreePage::on_ISinsert_clicked()
 {
     ISzjs.insert(pair<int,char>( ui->ISinputInsertPair->toPlainText().toInt(), 'z'));
     ISzjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->ISzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
     //ui->zjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -57,7 +58,7 @@ void indexSearchTreePage::on_ISinsert_clicked()
     //
     ui->ISzjspng->setPixmap(rePixmap);
 
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
     //开始缩放图片
 //    int width0 = img->width();
 //    int height0 = img->height();
@@ -81,11 +82,12 @@ void indexSearchTreePage::on_ISerase_clicked()
 {
     ISzjs.erase(ui->ISinputEraseKey->toPlainText().toInt());
     ISzjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->ISzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
     //ui->zjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -131,11 +133,12 @@ void indexSearchTreePage::on_ISshunxucharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->ISzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
         //ui->zjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -181,11 +184,12 @@ void indexSearchTreePage::on_ISsuijicharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->ISzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
         //ui->zjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -246,11 +250,12 @@ void indexSearchTreePage::on_ISzidongsuijicharu_clicked()
             iForZiDongSuiJiChaRu++;
             //
             temp_zjsForZiDongSuiJiChaRu.output();
+            Sleep(100);
             int x = 1600;
             int y = 1000;
             ui->ISzjspng->setGeometry(5,5,x,y);
             //QImage* img=new QImage;
-            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
             //ui->AVLzjspng->setScaledContents(false);
             //
             int imgw1 = pixmap->width();
@@ -289,12 +294,13 @@ void indexSearchTreePage::on_ISelementOfRank_clicked()
 {
     pair<int,char> _element = temp_zjsForZiDongSuiJiChaRu.elementOfRank(ui->ISinput_elementOfRank->toPlainText().toInt());
     temp_zjsForZiDongSuiJiChaRu.outputForFind(_element);
+    Sleep(100);
     //
     int x = 1600;
     int y = 1000;
     ui->ISzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\indexSearchTreezjs.png");
     //ui->zjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();

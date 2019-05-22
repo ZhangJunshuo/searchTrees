@@ -380,8 +380,8 @@ void searchTree<T>::output()
         output(mRoot, mRoot->key, 0, fp);
 	fprintf(fp,"}\n");
 	fclose(fp);
-    //system("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/AVL_searchTree_output_tempFile.dot -T png -o zjs.png");
-    WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/AVL_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/zjs.png", SW_HIDE);
+    //system("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/AVL_searchTree_output_tempFile.dot -T png -o avlzjs.png");
+    WinExec("dot D:/zhangjunshuo_qt/myFirstWidgetProject/image/AVL_searchTree_output_tempFile.dot -T png -o D:/zhangjunshuo_qt/myFirstWidgetProject/image/avlzjs.png", SW_HIDE);
 }
 #endif
 

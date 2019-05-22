@@ -13,7 +13,7 @@ TreapTreePage::TreapTreePage(QWidget *parent) :
     ui->setupUi(this);
     setWindowState(Qt::WindowMaximized);
     //QImage* img=new QImage;
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
     //ui->Treapzjspng->setPixmap(QPixmap::fromImage(*img));
 }
 
@@ -31,11 +31,12 @@ void TreapTreePage::on_Treapinsert_clicked()
 {
     Treapzjs.insert(Treapzjs.indexOfRoot,pair<int,char>( ui->TreapinputInsertPair->toPlainText().toInt(), 'z'));
     Treapzjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->Treapzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
     //ui->Treapzjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -57,7 +58,7 @@ void TreapTreePage::on_Treapinsert_clicked()
     //
     ui->Treapzjspng->setPixmap(rePixmap);
 
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
     //开始缩放图片
 //    int width0 = img->width();
 //    int height0 = img->height();
@@ -81,11 +82,12 @@ void TreapTreePage::on_Treaperase_clicked()
 {
     Treapzjs.erase(Treapzjs.indexOfRoot,ui->TreapinputEraseKey->toPlainText().toInt());
     Treapzjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->Treapzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
     //ui->Treapzjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -131,11 +133,12 @@ void TreapTreePage::on_Treapshunxucharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->Treapzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
         //ui->Treapzjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -181,11 +184,12 @@ void TreapTreePage::on_Treapsuijicharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->Treapzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
         //ui->Treapzjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -246,11 +250,12 @@ void TreapTreePage::on_Treapzidongsuijicharu_clicked()
             TreapiForZiDongSuiJiChaRu++;
             //
             Treaptemp_zjsForZiDongSuiJiChaRu.output();
+            Sleep(100);
             int x = 1600;
             int y = 1000;
             ui->Treapzjspng->setGeometry(5,5,x,y);
             //QImage* img=new QImage;
-            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\treapzjs.png");
             //ui->zjspng->setScaledContents(false);
             //
             int imgw1 = pixmap->width();

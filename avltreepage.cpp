@@ -13,7 +13,7 @@ AVLTreePage::AVLTreePage(QWidget *parent) :
     ui->setupUi(this);
     setWindowState(Qt::WindowMaximized);
     //QImage* img=new QImage;
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
     //ui->AVLzjspng->setPixmap(QPixmap::fromImage(*img));
 }
 
@@ -31,11 +31,12 @@ void AVLTreePage::on_AVLinsert_clicked()
 {
     AVLzjs.insert( ui->AVLinputInsertPair->toPlainText().toInt() );
     AVLzjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->AVLzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
     //ui->AVLzjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -57,7 +58,7 @@ void AVLTreePage::on_AVLinsert_clicked()
     //
     ui->AVLzjspng->setPixmap(rePixmap);
 
-    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    //img->load("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
     //开始缩放图片
 //    int width0 = img->width();
 //    int height0 = img->height();
@@ -81,11 +82,12 @@ void AVLTreePage::on_AVLerase_clicked()
 {
     AVLzjs.erase(ui->AVLinputEraseKey->toPlainText().toInt());
     AVLzjs.output();
+    Sleep(100);
     int x = 1600;
     int y = 1000;
     ui->AVLzjspng->setGeometry(5,5,x,y);
     //QImage* img=new QImage;
-    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+    QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
     //ui->AVLzjspng->setScaledContents(false);
     //
     int imgw1 = pixmap->width();
@@ -130,11 +132,12 @@ void AVLTreePage::on_AVLshunxucharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->AVLzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
         //ui->AVLzjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -179,11 +182,12 @@ void AVLTreePage::on_AVLsuijicharu_clicked()
         }
     //
         temp_zjs.output();
+        Sleep(100);
         int x = 1600;
         int y = 1000;
         ui->AVLzjspng->setGeometry(5,5,x,y);
         //QImage* img=new QImage;
-        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+        QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
         //ui->AVLzjspng->setScaledContents(false);
         //
         int imgw1 = pixmap->width();
@@ -243,11 +247,12 @@ void AVLTreePage::on_AVLzidongsuijicharu_clicked()
             AVLiForZiDongSuiJiChaRu++;
             //
             AVLtemp_zjsForZiDongSuiJiChaRu.output();
+            Sleep(100);
             int x = 1600;
             int y = 1000;
             ui->AVLzjspng->setGeometry(5,5,x,y);
             //QImage* img=new QImage;
-            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\zjs.png");
+            QPixmap *pixmap = new QPixmap("D:\\zhangjunshuo_qt\\myFirstWidgetProject\\image\\avlzjs.png");
             //ui->zjspng->setScaledContents(false);
             //
             int imgw1 = pixmap->width();

@@ -3,7 +3,7 @@
 #include "avltreepage.h"
 #include "rbtreepage.h"
 #include "treaptreepage.h"
-#include "indexsearchtreepage.h"""
+#include "indexsearchtreepage.h"
 #include <QApplication>
 #include <QDesktopWidget>
 

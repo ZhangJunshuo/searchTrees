@@ -195,6 +195,21 @@
     </rect>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>1620</x>
+     <y>530</y>
+     <width>211</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请在自动随机插入完成后再使用
+查找排名的功能，
+否则可能造成程序意外结束</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
